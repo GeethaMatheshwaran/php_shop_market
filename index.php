@@ -30,11 +30,11 @@
                 <form >
                     <div class="form-group">
                         <label for="user_name">User Name</label>
-                        <input type="text" class="form-control" id="user_name" placeholder="Enter User Name" required>
+                        <input type="text" class="form-control" id="user_name" placeholder="Enter User Name" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off" required>
                     </div>
                     <button type="button" class="btn btn-primary btn-block" onclick="handleLogin()">Submit</button>
                 </form>
