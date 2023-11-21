@@ -53,11 +53,16 @@ switch ($action) {
                 $product_name = $row['name'];
                 $product_description = $row['description'];
                 $product_status = $row['status'];
+                if ($product_status == 1) {
+                    $status = '<span class="dot green">&#9679;</span>'; // Display a green dot
+                } else {
+                    $status = '<span class="dot red">&#9679;</span>'; // Display a red dot
+                }
                 $table .= '<tr>
             <td scope="col">' . $sno . '</td>
             <td scope="col">' . $product_name . '</td>
             <td scope="col">' . $product_description . '</td>
-            <td scope="col">' . $product_status . '</td>
+            <td scope="col">' . $status . '</td>
             <td>
              <button class="btn btn-primary" onclick="getProductDetails(' . $id . ')">Update</button>
             <button class="btn btn-danger" onclick="deleteProduct(' . $id . ')">Delete</button>
@@ -95,7 +100,7 @@ switch ($action) {
         $id = $_POST['hiddenUpdateId'];
         $productName = $_POST['productName'];
         $productDescription = $_POST['productDescription'];
-        $productStatus = $_POST['productStatus'];       
+        $productStatus = $_POST['productStatus'];
         $sql = "update products set name='$productName' ,description='$productDescription' , status='$productStatus' where id='$id' ";
         $res = mysqli_query($conn, $sql);
 

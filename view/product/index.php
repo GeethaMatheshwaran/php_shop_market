@@ -10,6 +10,21 @@
     <!-- Include jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <style>
+        .dot {
+    font-size: 23px; /* Adjust size as needed */
+    line-height: 1; /* Ensure proper alignment */
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+    </style>
 </head>
 
 <body>
